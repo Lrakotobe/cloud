@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-microservice-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-microservice
+  template:
+    metadata:
+      labels:
+        app: simple-microservice
+    spec:
+      containers:
+        - name: simple-microservice
+          image: simple-microservice:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+
