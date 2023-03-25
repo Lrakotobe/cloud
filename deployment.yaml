@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-microservice-deployment
+  name: monapp-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: simple-microservice
+      app: monapp
   template:
     metadata:
       labels:
-        app: simple-microservice
+        app: monapp
     spec:
       containers:
-        - name: simple-microservice
-          image: simple-microservice:latest
+        - name: monapp
+          image: monapp:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

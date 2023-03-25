@@ -1,5 +1,5 @@
 # Définition de l'image de base
-FROM openjdk:17
+FROM adoptopenjdk:17-jre-hotspot
 
 # Définition du répertoire de travail
 WORKDIR /app

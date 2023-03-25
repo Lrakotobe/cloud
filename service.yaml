@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mon-app
+  name: monapp
 spec:
   selector:
-    app: mon-app
+    app: monapp
   ports:
     - name: http
       protocol: TCP
